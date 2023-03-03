@@ -27,7 +27,6 @@ def get_reviews(soup):
 for x in range(1,100):
     soup = get_soup(f'https://www.amazon.in/OnePlus-Nord-Jade-128GB-Storage/product-reviews/B0B3CPQ5PF/ref=cm_cr_getr_d_paging_btm_prev_1?ie=UTF8&reviewerType=all_reviews&pageNumber={x}')
     get_reviews(soup)
-    print(len(reviewlist))
     if not soup.find('li',{'class':'a-disabled a-last'}):
         pass
     else:
